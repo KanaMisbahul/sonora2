@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Etalase - SONORA</title>
+<meta name="description" content="Etalase alat musik SONORA per kategori.">
+<meta name="color-scheme" content="light dark">
+
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Prototype: untuk produksi, self-host Geist + Geist Mono (font-display: swap). -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body data-page="etalase">
+<div id="layoutTop"></div>
+<main>
+<section class="page"><div class="wrap">
+<h1 class="section-title reveal">Etalase</h1>
+<p class="sub page-sub reveal">Klik produk untuk melihat detail. Panah di tiap kategori membuka daftar lengkapnya.</p>
+<div class="cabinet reveal" role="group" aria-label="Etalase produk per kategori"><div class="cab-cols" id="cabinetCols"></div></div>
+</div></section>
+</main>
+<div id="layoutBottom"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

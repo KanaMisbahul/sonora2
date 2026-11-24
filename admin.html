@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seller Center - SONORA</title>
+<meta name="description" content="Halaman admin SONORA.">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Prototype: untuk produksi, self-host Geist + Geist Mono (font-display: swap). -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body data-page="admin">
+<div id="layoutTop"></div>
+<main>
+<section class="page"><div class="wrap">
+<div class="login" id="loginView">
+<form class="login-card" id="loginForm" novalidate>
+<h1>Login Admin</h1>
+<p class="sub">Masuk untuk mengelola katalog produk.</p>
+<div class="field"><label for="adminUser">Username</label><input id="adminUser" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required></div>
+<div class="field"><label for="adminPass">Password</label><input id="adminPass" name="password" type="password" autocomplete="current-password" required></div>
+<p class="error" id="loginErr" role="alert" hidden>Username atau password salah.</p>
+<button class="btn primary block">Masuk</button>
+<p class="note">Demo: login ini hanya gerbang tampilan di browser, bukan pengamanan. Jangan dipakai untuk data sungguhan.</p>
+</form>
+</div>
+<div id="adminView" hidden>
+<div class="admin-bar"><h1 class="section-title" id="adminTitle" tabindex="-1">Seller Center</h1><button class="btn ghost" id="logoutBtn">Keluar</button></div>
+<div class="panel"><div class="admin-layout"><div class="admin-menu"><button class="active" onclick="adminTab('overview',this)">Ringkasan</button><button onclick="adminTab('products',this)">Produk</button><button onclick="adminTab('add',this)">Tambah produk</button></div><div class="admin-content" id="adminContent"></div></div></div>
+</div>
+</div></section>
+</main>
+<div id="layoutBottom"></div>
+<script src="assets/app.js"></script><script src="assets/admin.js"></script>
+</body>
+</html>

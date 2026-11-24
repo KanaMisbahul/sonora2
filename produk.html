@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produk - SONORA</title>
+<meta name="description" content="Semua produk SONORA: gitar, keyboard, ukulele, dan aksesoris.">
+<meta name="color-scheme" content="light dark">
+
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Prototype: untuk produksi, self-host Geist + Geist Mono (font-display: swap). -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body data-page="produk">
+<div id="layoutTop"></div>
+<main>
+<section class="page"><div class="wrap">
+<h1 class="section-title reveal">Produk</h1>
+<div class="toolbar">
+<div class="searchbox"><label class="sr-only" for="search">Cari produk</label><i class="ph ph-magnifying-glass" aria-hidden="true"></i><input id="search" type="search" placeholder="Cari gitar, keyboard, aksesoris..." oninput="renderProducts()"></div>
+<div><label class="sr-only" for="categoryFilter">Kategori</label><select id="categoryFilter" onchange="renderProducts()"><option value="Semua">Semua kategori</option><option>Gitar</option><option>Keyboard</option><option>Ukulele</option><option>Aksesoris</option></select></div>
+<div><label class="sr-only" for="sortFilter">Urutkan</label><select id="sortFilter" onchange="renderProducts()"><option value="featured">Urutkan: Pilihan</option><option value="low">Harga terendah</option><option value="high">Harga tertinggi</option><option value="az">Nama A-Z</option></select></div>
+</div>
+<p class="count-line" id="productCount" role="status">Memuat produk...</p>
+<div class="product-grid" id="productGrid"></div>
+</div></section>
+</main>
+<div id="layoutBottom"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

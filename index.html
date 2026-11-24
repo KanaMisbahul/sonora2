@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SONORA - Toko Alat Musik Online</title>
+<meta name="description" content="Toko alat musik online: gitar, keyboard, ukulele, dan aksesoris.">
+<meta name="color-scheme" content="light dark">
+
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Prototype: untuk produksi, self-host Geist + Geist Mono (font-display: swap). -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body data-page="home">
+<div id="layoutTop"></div>
+<main>
+<section class="hero"><div class="wrap hero-grid">
+<div class="hero-copy">
+<h1 class="rise">Gitar, keyboard, dan ukulele.</h1>
+<p class="rise" style="--i:1">Dari alat pertama sampai panggung kecil. Pilih, masukkan keranjang, lalu pesan lewat WhatsApp.</p>
+<div class="hero-actions rise" style="--i:2"><a class="btn primary" href="produk.html">Lihat produk</a><a class="btn ghost" href="etalase.html">Lihat etalase</a></div>
+</div>
+<div class="hero-photo rise" style="--i:1"><img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=1400&amp;q=80" alt="Gitar akustik" fetchpriority="high" data-fb></div>
+</div></section>
+
+<section id="featured" style="padding-top:64px"><div class="wrap">
+<div class="section-head reveal"><h2 class="section-title">Produk pilihan</h2><a class="btn ghost" href="produk.html">Lihat semua produk</a></div>
+<div class="product-grid" id="featuredGrid"></div>
+</div></section>
+
+<section class="newsletter"><div class="wrap"><div class="newsletter-inner reveal">
+<div><h2>Kabar koleksi terbaru</h2><p>Info koleksi dan penawaran baru langsung ke email kamu.</p></div>
+<form class="newsletter-form" onsubmit="event.preventDefault();toast('Terima kasih! Email berhasil didaftarkan (demo).');this.reset()"><div class="field"><label for="nlEmail">Email</label><input id="nlEmail" type="email" placeholder="nama@email.com" autocomplete="email" required></div><button class="btn primary">Daftar</button></form>
+</div></div></section>
+</main>
+<div id="layoutBottom"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
